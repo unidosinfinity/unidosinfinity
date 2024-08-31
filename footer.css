@@ -115,11 +115,9 @@ footer img {
     margin-bottom: 30px;
   }
 
-  .footer-section a i.fab {
-  font-size: 16px;
-  vertical-align: middle;
-  margin: auto;
-}
+ .footer-sectionI{
+   text-align: center;
+  }
 
 
 footer img {
