@@ -151,4 +151,47 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© 2024 UNIDOS INFINITY.
+        <p>© 2024 UNIDOS INFINITY. Todos los derechos reservados.</p>
+        <p>ONG sin fines de lucro registrada.</p>
+        <img src="imagenes/logos unidos infinity/IMG-logoBG.png" alt="Logo BG">
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Abrir menú
+    document.getElementById('menu-icon').addEventListener('click', function() {
+      document.getElementById('side-menu').classList.toggle('active');
+    });
+
+    // Cerrar menú
+    document.getElementById('close-menu-icon').addEventListener('click', function() {
+      document.getElementById('side-menu').classList.remove('active');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Selecciona todos los elementos que deben tener la animación de desvanecimiento
+      const fadeElements = document.querySelectorAll('.fade-in');
+
+      // Función para manejar el desplazamiento
+      function handleScroll() {
+        fadeElements.forEach(function(element) {
+          const elementPosition = element.getBoundingClientRect().top; // Posición del elemento
+          const windowHeight = window.innerHeight; // Altura de la ventana visible
+
+          // Comprueba si el elemento es visible en la ventana
+          if (elementPosition < windowHeight - 100) { // 100px antes de que entre completamente en la vista
+            element.classList.add('visible');
+          }
+        });
+      }
+
+      // Escuchar el evento de desplazamiento
+      window.addEventListener('scroll', handleScroll);
+
+      // Ejecutar la función al cargar la página para capturar elementos visibles
+      handleScroll();
+    });
+  </script>
+</body>
+</html> 
