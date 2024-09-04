@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="es">
 
@@ -184,7 +183,16 @@
   </footer>
 
   <script>
-  
+
+      // Abrir menú
+    document.getElementById('menu-icon').addEventListener('click', function() {
+      document.getElementById('side-menu').classList.toggle('active');
+    });
+
+    // Cerrar menú
+    document.getElementById('close-menu-icon').addEventListener('click', function() {
+      document.getElementById('side-menu').classList.remove('active');
+    });
 
   let costoSeleccionado = null;
     let mostrado = false;
