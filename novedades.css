@@ -57,6 +57,21 @@ main {
     flex-grow: 1;
 }
 
+.noticia a {
+    font-size: 13px;
+    color: #fff;
+    padding: 5%;
+    text-decoration: none;
+    background-color: rgba(126, 118, 118, 0.719);
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .noticia a:hover {
+    color: rgb(255, 251, 0);
+   }
+
 /* RESPONSIVE */
 @media (max-width: 769px) {
     .noticia {
