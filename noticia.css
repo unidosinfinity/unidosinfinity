@@ -1,0 +1,68 @@
+/* Estilos para la plantilla de noticias */
+
+.news-article {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 7%;
+}
+
+.news-image {
+    text-align: center;
+}
+
+.news-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-title {
+    font-size: 2rem;
+    margin-top: 0;
+    color: #333;
+}
+
+.news-date,
+.news-author {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.news-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #333;
+}
+
+.news-links {
+    margin: 100px;
+    text-align: center;
+    color: rgba(119, 119, 119, 0.623);
+}
+
+.news-links p {
+    margin-top: 0;
+
+}
+
+.news-links a {
+    color: #bf2e33f5;
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+
+.news-links a:hover {
+    text-decoration: underline;
+}
+
