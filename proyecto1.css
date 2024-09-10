@@ -1,95 +1,309 @@
-main {
-    padding: 5%;
-}
-
-.project-section  {
-    background-color: white;
-    padding: 10%;
-}
-
- .contenido {
-    opacity: 100%;
-    margin-top: -40%;
-    
- }
-
-h1 {
-    text-align: center;
-    font-size: 35px;
-    color: #000000;
-}
-
-.linea-corta {
-    border: 0;
-    height: 2px;      
-    background-color: #bf2e33; 
-    width: 15%;            
-    margin: auto;  
-    margin-bottom: 5%;
-}
-
-.presentacion {
-    margin: auto;
-    text-align: center;
-    width: 90%;
-    font-size: 19px;
-    margin-bottom: 15%;
-
-}
-
-.project-section-imagen img{
-    width: 100%;
-    opacity: 80;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    z-index: 1;
-}
-
-.sub-contenido h2{
-    font-size: 27px;
-}
-
-.sub-contenido p {
-    font-size: 17px;
-    margin-bottom: 10%;
-}
-
-.sub-contenido ul {
-    font-size: 17px;
-    margin-bottom: 10%;
-}
-
-.h2colabora {
-    text-align: center;
-    font-size: 27px;
-    margin-top: 20%;
-}
-
-.carousel {
-    position: relative;
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.carousel-inner {
+/* Barra de progreso */
+.progress-container {
+    width: 80%; 
+    margin: 3rem auto;
+    margin-top: 10%;
     display: flex;
-}
-
-.carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease;
-}
-
-.carousel-item img {
-    margin: auto;
-    max-width: 65%;
-    display: block;
-    max-height: 65%;
-}
-
-.carousel h2 {
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: lightgray;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 5px; 
+  }
+  
+  .progress-bar::before {
+    content: '';
+    width: 25%;
+    height: 8px;
+    background-color: #007bff; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+  }
+  
+  .progress-steps {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+  
+  .step {
+    font-size: 1rem;
+    color: gray;
+    position: relative;
+  }
+  
+  .step.active {
+    color: #007bff; 
+  }
+  
+  .step::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: lightgray;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .step.active::before {
+    background-color: #007bff; 
+  }
+  
+  /* Sección del contenido (imagen y texto) */
+  .titulo-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    height: 300px; 
+    background-color: white;
+    margin: 0 auto 10%;
+    padding: 1.5rem; 
+    border: 1px solid lightgray;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 80%; 
+  }
+  
+  .titulo-banner img {
+    width: 30%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; 
+  }
+  
+  .text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 27px;
-    margin-top: 15%;
-}
+    padding: 1rem;
+  }
+  
+  .text-content p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .text-content h1 {
+    margin: 0.5rem 0 0; 
+    font-size: 2.5rem;
+    color: #333; 
+  }
+  
+/* Contenedor general para las secciones */
+.content-section {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Estilos para cada recuadro */
+  .card {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid lightgray;
+    line-height: 1.8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  /* Animación al pasar el ratón sobre la tarjeta */
+  .card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+  
+  /* Estilos para los títulos de las secciones */
+  .card h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Estilos para los párrafos dentro de cada sección */
+  .card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+  
+  /* Estilos para listas dentro de las tarjetas */
+  .card ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Animación de la barra de progreso */
+  .progress-bar::before {
+    content: '';
+    width: 0%; 
+    height: 5px;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2.5px;
+    animation: fillProgress 2s forwards; 
+  }
+  
+  /* Keyframes para la animación de la barra */
+  @keyframes fillProgress {
+    to {
+      width: 25%; /* Llenado hasta el 25% */
+    }
+  }
+  
+  /* Enlaces */
+  .card a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+  }
+  
+  .card a:hover {
+    color: #0056b3; 
+    text-decoration: underline;
+  }
+  
+  /* Ajustes generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    
+    /* Contenedor de la barra de progreso */
+    .progress-container {
+      width: 90%; 
+    }
+  
+    /* Barra de progreso */
+    .progress-bar {
+      width: 100%; 
+    }
+  
+    /* Ajustar los pasos de la barra de progreso */
+    .progress-steps {
+      width: 100%; 
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .step {
+      margin-bottom: 10px; 
+    }
+  
+    /* Título e imagen */
+    .titulo-banner {
+      flex-direction: column; 
+      height: auto;
+      padding: 1rem; 
+    }
+  
+    .titulo-banner img {
+      width: 80%;
+      height: auto; 
+      margin-bottom: 1rem; 
+    }
+  
+    /* Ajustar el contenido de texto */
+    .text-content h1 {
+      font-size: 2rem; 
+    }
+  
+    .text-content p {
+      font-size: 1rem; 
+    }
+  
+    /* Contenedor de las tarjetas */
+    .content-section {
+      width: 90%; 
+    }
+  
+    /* Estilos de las tarjetas en pantallas pequeñas */
+    .card {
+      padding: 1.5rem; 
+    }
+  
+    .card h2 {
+      font-size: 1.8rem; 
+    }
+  
+    .card p, .card ul li {
+      font-size: 1rem; 
+    }
+  }
+  
+  /* Ajustes para pantallas muy pequeñas (móviles) */
+  @media (max-width: 480px) {
+  
+    /* Barra de progreso */
+    .progress-container {
+      padding: 1rem; 
+    }
+  
+    /* Pasos de la barra de progreso */
+    .step {
+      font-size: 0.9rem; 
+    }
+  
+    /* Título e imagen */
+    .titulo-banner img {
+      width: 100%;
+    }
+  
+    .text-content h1 {
+      font-size: 1.8rem; 
+    }
+  
+    .text-content p {
+      font-size: 0.9rem; 
+    }
+  
+    /* Estilos de las tarjetas */
+    .card {
+      padding: 1rem; 
+    }
+  
+    .card h2 {
+      font-size: 1.5rem; 
+    }
+  
+    .card p, .card ul li {
+      font-size: 0.9rem; 
+    }
 
+    .step::before {
+       display: none;
+      }
+
+  }
+  
